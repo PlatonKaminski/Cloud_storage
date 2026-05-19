@@ -1,0 +1,9 @@
+.git
+.idea
+.env
+.vscode
+*.exe
+*.test
+data/
+tmp/
+vendor/

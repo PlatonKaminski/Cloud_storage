@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <h2>Cloud Storage</h2>
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Вход</button>
+            <button class="tab-btn" data-tab="register">Регистрация</button>
+        </div>
+        <form id="loginForm" class="auth-form active">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+        <form id="registerForm" class="auth-form">
+            <input type="text" id="registerName" placeholder="Имя" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Пароль (минимум 6 символов)" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div id="authError" class="auth-error"></div>
+    </div>
+</div>
+
+<div id="mainContent" style="display:none;">
+    <div class="header">
+        <h1>☁️ My Cloud Storage</h1>
+        <button onclick="logout()" class="logout-btn">Выйти</button>
+    </div>
+
+    <div class="upload-section">
+        <div class="upload-bar">
+            <input type="file" id="fileInput">
+            <select id="folderSelect">
+                <option value="">📁 Без папки</option>
+            </select>
+            <button onclick="uploadFile()" class="btn-upload">⬆️ Загрузить</button>
+            <input type="text" id="folderName" placeholder="Новая папка">
+            <button onclick="createFolder()" class="btn-folder">➕ Папка</button>
+        </div>
+    </div>
+
+    <!-- ТОЛЬКО ПРОВОДНИК, БЕЗ СЕКЦИЙ -->
+    <div id="explorerView" class="explorer"></div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

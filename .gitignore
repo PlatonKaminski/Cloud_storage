@@ -1,0 +1,17 @@
+
+*.exe
+*.test
+*.out
+/bin/
+
+/vendor/
+
+.env
+.idea/
+data/
+docker-compose.yml
+
+
+# ОС
+.DS_Store
+Thumbs.db
